@@ -11,7 +11,7 @@ function spaceship(shipName){
         function lifepod(podNum){
           console.log(`${podNum} didn't have enough space for more than one person so that person is both the ${position1} and ${position2}.`)
         };
-        
+
         lifepod("Pod5");
 }
 spaceship("crazy horse");
@@ -22,6 +22,11 @@ spaceship("crazy horse");
 
 // ==== Challenge 2: Implement a "counter maker" function ====
 const counterMaker = () => {
+      let count = 0;
+      return function counter(){ //don't forget the damn RETURN
+        count += 1;
+        return count;
+      };
   // IMPLEMENTATION OF counterMaker:
   // 1- Declare a `count` variable with a value of 0. We will be mutating it, so declare it using `let`!
   // 2- Declare a function `counter`. It should increment and return `count`.
@@ -29,6 +34,13 @@ const counterMaker = () => {
   //      "closes over" the `count` variable. It can "see" it in the parent scope!
   // 3- Return the `counter` function.
 };
+
+const newCounter = counterMaker();
+console.log(newCounter());
+console.log(newCounter());
+console.log(newCounter());
+console.log(newCounter());
+
 // Example usage: const myCounter = counterMaker();
 // myCounter(); // 1
 // myCounter(); // 2
