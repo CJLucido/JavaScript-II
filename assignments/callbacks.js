@@ -104,7 +104,18 @@ console.log(multiplyNums(3, 4, productTwo));
 function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
+    return cb(item, list);
 }
+
+const runThroughList = function(item, list){
+  return list.includes(item);
+  
+
+}
+
+console.log(contains('Pencil', items, runThroughList));
+console.log(contains('Eraser', items, runThroughList));
+
 
 /* STRETCH PROBLEM */
 
