@@ -4,6 +4,18 @@
 // that manipulates variables defined in the outer scope.
 // The outer scope can be a parent function, or the top level of the script.
 
+function spaceship(shipName){
+        const position1 = "Navigator";
+        const position2 = "Cook";
+
+        function lifepod(podNum){
+          console.log(`${podNum} didn't have enough space for more than one person so that person is both the ${position1} and ${position2}.`)
+        };
+        
+        lifepod("Pod5");
+}
+spaceship("crazy horse");
+
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
