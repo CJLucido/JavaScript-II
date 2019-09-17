@@ -111,4 +111,12 @@ taxMan = runners.map((item) => item.donation * .17);
 
 console.log(taxMan);
 
-// Problem 3
+// Problem 3: We want to know how many people wore 2XL, reduce them to a number!
+
+let totalMiddleWeights = 0;
+let middleWeightsByName = [];
+middleWeightsByName = runners.filter((item) => item.shirt_size == "2XL");
+console.log(middleWeightsByName);
+totalMiddleWeights = middleWeightsByName.length;
+
+console.log(totalMiddleWeights);
