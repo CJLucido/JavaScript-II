@@ -48,19 +48,58 @@ const arrLength = function(arr){
   return arr.length;
 }
 
+
+//////////////MY ATTEMPT at inline did not work////
+// function getLength(arr, arr => arr.length);
+// const arrLength = arr => arr.length;
+
+
 console.log(getLength(items, arrLength));
+
+
+
 
 function last(arr, cb) {
   // last passes the last item of the array into the callback.
+  return cb(arr);
 }
+
+const arrLast = function(arr){
+  return arr[arr.length -1];
+}
+
+console.log(last(items, arrLast));
+
+
+
 
 function sumNums(x, y, cb) {
   // sumNums adds two numbers (x, y) and passes the result to the callback.
+  return cb(x, y);
 }
+
+const addTwo = function(x,y){
+  return x + y;
+}
+
+console.log(sumNums(1, 2, addTwo));
+
+
+
+
 
 function multiplyNums(x, y, cb) {
   // multiplyNums multiplies two numbers and passes the result to the callback.
+    return cb(x , y);
 }
+
+const productTwo = function(x, y){
+  return x * y;
+}
+
+console.log(multiplyNums(3, 4, productTwo));
+
+
 
 function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.
