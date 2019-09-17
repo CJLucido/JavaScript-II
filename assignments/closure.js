@@ -23,10 +23,17 @@ spaceship("crazy horse");
 // ==== Challenge 2: Implement a "counter maker" function ====
 const counterMaker = () => {
       let count = 0;
+        
       return function counter(){ //don't forget the damn RETURN
         count += 1;
-        return count;
+        if (count >= 4){
+          return count = count - 3;
+        }else{
+        return count;}
       };
+    
+
+      
   // IMPLEMENTATION OF counterMaker:
   // 1- Declare a `count` variable with a value of 0. We will be mutating it, so declare it using `let`!
   // 2- Declare a function `counter`. It should increment and return `count`.
